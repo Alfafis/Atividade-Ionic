@@ -8,5 +8,14 @@
 </ion-header>
 
 <ion-content>
-
+  <form (ngSubmit)="AddPost()">
+    <ion-title>Preencha os Dados do Post</ion-title>
+    <ion-item>
+      <ion-input placeholder="Titulo" [(ngModel)]="AddPost.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Conteudo do Post..." [(ngModel)]="AddPost.body"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Adicionar Post</button>
+  </form>
 </ion-content>
