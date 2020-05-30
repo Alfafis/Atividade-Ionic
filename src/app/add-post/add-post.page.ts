@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
-import { Posts } from '../posts/posts.models';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-post',
@@ -10,14 +9,18 @@ export class AddPostPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.posts)
+  form = {
+    userId: '',
+    id: '',
+    title: '',
+    body: ''
   }
 
-  @Output() post: Posts
+  ngOnInit() {
+  }
 
   AddPost(form) {
-    console.log(form);
+    console.log(form.value);
   }
 
 }
